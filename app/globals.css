@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 255 255 255;
+    --foreground: 10 14 42;
+    --card: 249 250 251;
+    --card-foreground: 10 14 42;
+    --popover: 255 255 255;
+    --popover-foreground: 10 14 42;
+    --primary: 255 255 255;
+    --primary-foreground: 10 14 42;
+    --secondary: 249 250 251;
+    --secondary-foreground: 10 14 42;
+    --accent: 255 165 0;
+    --accent-foreground: 255 255 255;
+    --muted: 241 245 249;
+    --muted-foreground: 10 14 42;
+    --destructive: 239 68 68;
+    --destructive-foreground: 255 255 255;
+    --border: 226 232 240;
+    --input: 226 232 240;
+    --ring: 10 14 42;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 10 14 42;
+    --foreground: 255 255 255;
+    --card: 16 20 51;
+    --card-foreground: 255 255 255;
+    --popover: 10 14 42;
+    --popover-foreground: 255 255 255;
+    --primary: 10 14 42;
+    --primary-foreground: 255 255 255;
+    --secondary: 16 20 51;
+    --secondary-foreground: 255 255 255;
+    --accent: 255 165 0;
+    --accent-foreground: 255 255 255;
+    --muted: 16 20 51;
+    --muted-foreground: 255 255 255;
+    --destructive: 248 113 113;
+    --destructive-foreground: 10 14 42;
+    --border: 16 20 51;
+    --input: 16 20 51;
+    --ring: 255 255 255;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .animate-fade-in-up {
+    animation: fadeInUp 0.6s ease-out forwards;
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  .delay-200 {
+    animation-delay: 0.2s;
+  }
+
+  .delay-400 {
+    animation-delay: 0.4s;
+  }
+
+  .delay-600 {
+    animation-delay: 0.6s;
+  }
+
+  .delay-800 {
+    animation-delay: 0.8s;
+  }
+
+  .delay-1000 {
+    animation-delay: 1s;
+  }
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
